@@ -1,4 +1,6 @@
-# normalize-filenames
+# utils
+
+## normalize filenames
 
 ```bash
 $ python normalize_filenames.py -h
@@ -16,4 +18,21 @@ optional arguments:
                         with normalized filenames
 ```
 
+## random sampler
 
+```bash
+usage: random_sampler.py [-h] -f FILENAME -s SAMPLESIZE -r
+                         RANDOMSEED
+
+Random sampling from very large files.
+[Algorithm #3 from here.](http://metadatascience.com/2014/02/27/random-sampling-from-very-large-files)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FILENAME, --filename FILENAME
+                        name of file to sample from
+  -s SAMPLESIZE, --samplesize SAMPLESIZE
+                        number of lines in sample
+  -r RANDOMSEED, --randomseed RANDOMSEED
+                        random seed
+```
