@@ -25,7 +25,6 @@ usage: random_sampler.py [-h] -f FILENAME -s SAMPLESIZE -r
                          RANDOMSEED
 
 Random sampling from very large files.
-[Algorithm #3 from here.](http://metadatascience.com/2014/02/27/random-sampling-from-very-large-files)
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -36,3 +35,5 @@ optional arguments:
   -r RANDOMSEED, --randomseed RANDOMSEED
                         random seed
 ```
+
+[Based on _algorithm 3_ from this post.](http://metadatascience.com/2014/02/27/random-sampling-from-very-large-files)
