@@ -1,13 +1,31 @@
 # utils
 
+## rearrange tsv columns
+
+A somewhat improved version of the `cut` command
+for rearranging columns of a `csv` file.
+Column reordering and column repeat are allowed.
+Column spec can be something like: "2,1" or "4-6,2,8,8".
+Columns counted from one. Zero means adding an empty column.
+
+```pre
+$ python3 cuto.py -h
+usage: cuto.py [-h] -c COLUMN_SPEC
+
+arguments:
+  -c COLUMN_SPEC, --column-spec COLUMN_SPEC
+                        specify columns to choose, e.g. "2,1" or "4-6,2,8,8"
+```
+
+
 ## normalize filenames
+
+Normalize filenames: no space and other silly chars.
+From one dir to another dir by symlinks to keep original files.
 
 ```pre
 $ python3 normalize_filenames.py -h
 usage: normalize_filenames.py [-h] -i INPUT_DIR -o OUTPUT_DIR
-
-Normalize filenames: no space and other silly chars.
-From one dir to another dir by symlinks to keep original files.
 
 arguments:
   -i INPUT_DIR, --input-dir INPUT_DIR
@@ -19,15 +37,15 @@ arguments:
 
 ## print duplex pages
 
+Generate page numbers for print A5 in duplex.
+For pages 1-20 the output is:
+1,2,5,6,9,10,13,14,17,18 and 3,4,7,8,11,12,15,16,19,20
+
 ```pre
 $ python3 print_duplex_pages.py -h
 usage: print_duplex_pages.py [-h] [-f FR] [-t TO]
                              [--exclude-from EXCLUDE_FROM]
                              [--exclude-to EXCLUDE_TO]
-
-Generate page numbers for print A5 in duplex.
-For pages 1-20 the output is:
-1,2,5,6,9,10,13,14,17,18 and 3,4,7,8,11,12,15,16,19,20
 
 optional arguments:
   -f FR, --fr FR        from this page number (default: 1)
@@ -40,11 +58,11 @@ optional arguments:
 
 ## random sampler
 
+Random sampling from _very_ large files.
+
 ```pre
 $ python3 random_sampler.py -h
 usage: random_sampler.py [-h] -f FILENAME -s SAMPLESIZE -r RANDOMSEED
-
-Random sampling from very large files.
 
 arguments:
   -f FILENAME, --filename FILENAME
