@@ -1,5 +1,20 @@
 # utils
 
+## string to codepoints
+
+Print unicode codepoints for all chars in input.
+Except whitespaces -- in this first implementation.
+
+```pre
+echo 'külső 句' | ./codepoints.sh 
+k U+006B
+ü U+00FC
+l U+006C
+s U+0073
+ő U+0151
+句 U+53E5
+```
+
 ## rearrange tsv columns
 
 A somewhat improved version of the `cut` command
@@ -16,7 +31,6 @@ arguments:
   -c COLUMN_SPEC, --column-spec COLUMN_SPEC
                         specify columns to choose, e.g. "2,1" or "4-6,2,8,8"
 ```
-
 
 ## normalize filenames
 
